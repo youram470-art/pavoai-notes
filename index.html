@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Short Drama Production Notes — Pavo AI</title>
+<meta name="description" content="A working notebook on AI short drama production: shot planning, image-to-video consistency, voice, subtitles and delivery.">
+<style>body{max-width:760px;margin:48px auto;padding:0 20px;font:17px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,sans-serif;color:#1b1b1f}h1{font-size:30px;line-height:1.25}h2{margin-top:34px;font-size:21px}code{background:#f2f2f5;padding:2px 5px;border-radius:4px}a{color:#0b57d0}</style>
+</head>
+<body>
+<h1>AI Short Drama Production Notes</h1>
+<p>Notes from the content team behind <a href="https://pavoai.app/">Pavo AI</a>, an AI video generator and image-to-video maker. Everything below is what we actually do when a 60-second vertical drama has to ship in a week.</p>
+
+<h2>1. Beat sheet before prompts</h2>
+<p>A one-page beat sheet with nine beats maps cleanly onto nine shots. Each beat states who wants what, what blocks it, and how the shot ends. If a beat cannot be described in one sentence, it is two beats.</p>
+
+<h2>2. Shot list and duration</h2>
+<p>Keep every generated shot between three and six seconds. Longer generations drift: faces change, hands merge, camera moves lose intent. Cutting on motion hides the seams between takes far better than a crossfade.</p>
+
+<h2>3. Consistency is an image problem</h2>
+<p>Text-to-video is fine for establishing shots, weather, crowds and inserts. For anyone recurring, generate a character sheet first, then drive every shot with image-to-video from that reference. Store the prompt, seed and reference image next to the shot ID so a re-shoot is a lookup, not a guess.</p>
+
+<h2>4. Voice, music, subtitles</h2>
+<p>Lock picture, then voice, then music. Subtitles for vertical: two lines maximum, roughly 42 characters per line, positioned above the platform UI. Burned-in captions survive re-uploads; sidecar files usually do not.</p>
+
+<h2>5. Delivery checklist</h2>
+<ul>
+<li>Hook visible in the first 1.5 seconds</li>
+<li>9:16 master plus a 16:9 cut for YouTube</li>
+<li>Loudness around -14 LUFS for social, -16 for web</li>
+<li>Filename, caption and thumbnail written before uploading</li>
+</ul>
+
+<h2>Tools</h2>
+<p>The pipeline above runs end to end in <a href="https://pavoai.app/">Pavo AI</a> — script to shot list, image-to-video generation, voice and export. A longer written version of this playbook lives on our <a href="https://pavoai.app/blog">blog</a>.</p>
+
+<p><em>Maintained by Xinyue Zhan, Content Lead at Pavo AI.</em></p>
+</body>
+</html>
