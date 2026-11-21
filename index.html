@@ -1,54 +1,53 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI 숏드라마 제작 노트 — Pavo AI</title>
-<meta name="description" content="60초 세로 드라마를 일주일 안에 완성하는 팀의 작업 노트. 비트시트, 샷 리스트, 이미지→영상 일관성, 보이스와 자막, 납품 체크리스트까지 실제 순서대로 정리했습니다.">
+<title>AI Short Drama Production Notes — Pavo AI</title>
+<meta name="description" content="A working notebook on AI short drama production: shot planning, image-to-video consistency, voice, subtitles and delivery.">
 <style>body{max-width:760px;margin:48px auto;padding:0 20px;font:17px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,sans-serif;color:#1b1b1f}h1{font-size:30px;line-height:1.25}h2{margin-top:34px;font-size:21px}code{background:#f2f2f5;padding:2px 5px;border-radius:4px}a{color:#0b57d0}</style>
 <link rel="canonical" href="https://youram470-art.github.io/pavoai-notes/">
 </head>
 <body>
-<h1>AI 숏드라마 제작 노트</h1>
-<p>60초 세로 드라마를 일주일 안에 내보내는 팀의 작업 노트입니다. 기획, 샷 리스트, 이미지→영상 일관성, 보이스, 자막, 납품까지 실제로 하는 순서대로 적었습니다. 만든 곳은 <a href="https://pavoai.app/">Pavo AI</a>이고, 아래 내용은 데모가 아니라 지난 분기에 실제로 납품한 컷들을 기준으로 정리한 것입니다.</p>
+<h1>AI Short Drama Production Notes</h1>
+<p>Notes from the content team behind <a href="https://pavoai.app/">Pavo AI</a>, an AI video generator and image-to-video maker. Everything below is what we actually do when a 60-second vertical drama has to ship in a week.</p>
 
-<h2>사이트별 노트</h2>
+<h2>More notes by site</h2>
 <ul>
-<li><a href="h3video-org.html">H3 Video: 빠른 생성이 유리한 경우와 불리한 경우</a> — h3video.org</li>
-<li><a href="seedance25-kr.html">Seedance 2.5 한국어 사용기</a> — seedance25.kr</li>
-<li><a href="grokaiimagegenerator-net.html">Grok 이미지 생성기: 콘셉트 아트에 써 본 결과</a> — grokaiimagegenerator.net</li>
-<li><a href="reversevideosearch-org.html">역영상 검색으로 원본 클립 찾기</a> — reversevideosearch.org</li>
-<li><a href="viddiai-com.html">Viddi AI와 편집 보조의 변화</a> — viddiai.com</li>
-<li><a href="wan-3-io.html">Wan 3.0: 직접 돌려 본 비용과 품질</a> — wan-3.io</li>
-<li><a href="memoriessong-com.html">Memories Song: 가족 이야기를 노래로</a> — memoriessong.com</li>
-<li><a href="kling4-co-kr.html">Kling 4.0: 한국어 프롬프트 실전 메모</a> — kling4.co.kr</li>
-<li><a href="gta6aivideo-art.html">GTA 6 AI 영상: 게임풍 클립의 문법</a> — gta6aivideo.art</li>
+<li><a href="h3video-org.html">H3 Video: A Practical Look at Fast AI Video Generation</a> — h3video.org</li>
+<li><a href="seedance25-kr.html">Seedance 2.5 in Korean: Text-to-Video Without the Learning Curve</a> — seedance25.kr</li>
+<li><a href="grokaiimagegenerator-net.html">Grok AI Image Generator: What It Is Good For, and What It Is Not</a> — grokaiimagegenerator.net</li>
+<li><a href="reversevideosearch-org.html">Reverse Video Search: Finding Where a Clip Came From</a> — reversevideosearch.org</li>
+<li><a href="viddiai-com.html">Viddi AI and the Quiet Shift Toward Assisted Editing</a> — viddiai.com</li>
+<li><a href="wan-3-io.html">Wan 3.0: Open Video Models and the Trade-Offs That Come With Them</a> — wan-3.io</li>
+<li><a href="memoriessong-com.html">Memories Song: Turning Family Stories Into Something You Can Play</a> — memoriessong.com</li>
+<li><a href="kling4-co-kr.html">Kling 4.0: 한국어로 쓰는 AI 영상 생성 실전 메모</a> — kling4.co.kr</li>
+<li><a href="gta6aivideo-art.html">GTA 6 AI Video: Why Game-Style Clips Are Everywhere</a> — gta6aivideo.art</li>
+</ul>
+<h2>1. Beat sheet before prompts</h2>
+<p>A one-page beat sheet with nine beats maps cleanly onto nine shots. Each beat states who wants what, what blocks it, and how the shot ends. If a beat cannot be described in one sentence, it is two beats.</p>
+
+<h2>2. Shot list and duration</h2>
+<p>Keep every generated shot between three and six seconds. Longer generations drift: faces change, hands merge, camera moves lose intent. Cutting on motion hides the seams between takes far better than a crossfade.</p>
+
+<h2>3. Consistency is an image problem</h2>
+<p>Text-to-video is fine for establishing shots, weather, crowds and inserts. For anyone recurring, generate a character sheet first, then drive every shot with image-to-video from that reference. Store the prompt, seed and reference image next to the shot ID so a re-shoot is a lookup, not a guess.</p>
+
+<h2>4. Voice, music, subtitles</h2>
+<p>Lock picture, then voice, then music. Subtitles for vertical: two lines maximum, roughly 42 characters per line, positioned above the platform UI. Burned-in captions survive re-uploads; sidecar files usually do not.</p>
+
+<h2>5. Delivery checklist</h2>
+<ul>
+<li>Hook visible in the first 1.5 seconds</li>
+<li>9:16 master plus a 16:9 cut for YouTube</li>
+<li>Loudness around -14 LUFS for social, -16 for web</li>
+<li>Filename, caption and thumbnail written before uploading</li>
 </ul>
 
-<h2>1. 프롬프트보다 비트시트 먼저</h2>
-<p>9개 비트짜리 한 장 시트가 9개 샷에 그대로 대응합니다. 각 비트에는 누가 무엇을 원하는지, 무엇이 막는지, 샷이 어떻게 끝나는지를 적습니다. 한 문장으로 설명되지 않는 비트는 이미 두 개의 비트입니다. 이 단계를 건너뛰면 생성 모델이 아무리 좋아도 편집에서 무너집니다.</p>
+<h2>Tools</h2>
+<p>The pipeline above runs end to end in <a href="https://pavoai.app/">Pavo AI</a> — script to shot list, image-to-video generation, voice and export. A longer written version of this playbook lives on our <a href="https://pavoai.app/blog">blog</a>.</p>
 
-<h2>2. 샷 리스트와 길이</h2>
-<p>생성 샷은 3~6초로 유지하세요. 그보다 길면 얼굴이 바뀌고 손이 붙고 카메라 무브가 의도를 잃습니다. 크로스페이드보다 움직임 위에서 컷을 끊는 편이 이음새를 훨씬 잘 숨깁니다. 샷마다 샷 ID, 프롬프트, 시드, 참조 이미지를 한 줄로 남겨 두면 재촬영이 추측이 아니라 조회가 됩니다.</p>
-
-<h2>3. 일관성은 결국 이미지 문제</h2>
-<p>텍스트→영상은 설정 샷, 날씨, 군중, 삽입 컷에 적합합니다. 반복 등장하는 인물은 캐릭터 시트를 먼저 만들고, 그 참조 이미지로 이미지→영상을 돌리는 편이 안정적입니다. 의상과 헤어처럼 자주 흔들리는 요소는 참조 이미지에 고정해 두세요. 같은 인물을 세 번 생성해 보고 가장 나은 테이크를 기준으로 삼는 방식이 현실적입니다.</p>
-
-<h2>4. 보이스, 음악, 자막</h2>
-<p>순서는 화면 → 보이스 → 음악입니다. 화면이 잠기기 전에 보이스를 넣으면 컷 길이를 계속 고치게 됩니다. 세로 영상 자막은 두 줄 이내, 한 줄 20자 안팎이 읽기 좋고, 플랫폼 UI 위쪽에 배치합니다. 번인 자막은 재업로드에서도 살아남지만 사이드카 파일은 대개 사라집니다.</p>
-
-<h2>5. 납품 체크리스트</h2>
-<ul>
-<li>첫 1.5초 안에 훅이 보이는가</li>
-<li>9:16 마스터와 유튜브용 16:9 컷이 따로 있는가</li>
-<li>라우드니스는 소셜 -14 LUFS, 웹 -16 LUFS 근처인가</li>
-<li>파일명, 캡션, 썸네일을 업로드 전에 써 두었는가</li>
-</ul>
-
-<h2>도구</h2>
-<p>위 파이프라인은 <a href="https://pavoai.app/">Pavo AI</a>에서 스크립트 → 샷 리스트 → 이미지→영상 생성 → 보이스 → 내보내기까지 한 번에 돌릴 수 있습니다. 더 긴 글로 정리한 플레이북은 <a href="https://pavoai.app/blog">블로그</a>에 있습니다.</p>
-
-<p><em>작성·관리: Xinyue Zhan, Content Lead at Pavo AI.</em></p>
-<hr><small><nav>전체 노트: <a href="index.html">인덱스</a> · <a href="h3video-org.html">H3 Video</a> · <a href="seedance25-kr.html">Seedance 2.5</a> · <a href="grokaiimagegenerator-net.html">Grok 이미지</a> · <a href="reversevideosearch-org.html">역영상 검색</a> · <a href="viddiai-com.html">Viddi AI</a> · <a href="wan-3-io.html">Wan 3.0</a> · <a href="memoriessong-com.html">Memories Song</a> · <a href="kling4-co-kr.html">Kling 4.0</a> · <a href="gta6aivideo-art.html">GTA 6 AI 영상</a></nav></small>
+<p><em>Maintained by Xinyue Zhan, Content Lead at Pavo AI.</em></p>
+<hr><small><nav>All notes: <a href="index.html">Index</a> · <a href="h3video-org.html">H3 Video</a> · <a href="seedance25-kr.html">Seedance 2.5</a> · <a href="grokaiimagegenerator-net.html">Grok image</a> · <a href="reversevideosearch-org.html">Reverse video search</a> · <a href="viddiai-com.html">Viddi AI</a> · <a href="wan-3-io.html">Wan 3.0</a> · <a href="memoriessong-com.html">Memories Song</a> · <a href="kling4-co-kr.html">Kling 4.0</a> · <a href="gta6aivideo-art.html">GTA 6 AI video</a></nav></small>
 </body>
 </html>
